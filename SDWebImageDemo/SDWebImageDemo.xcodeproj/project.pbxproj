@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,14 @@
 		6B6A97E32508F7AA00AD3D45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6B6A97E12508F7AA00AD3D45 /* LaunchScreen.storyboard */; };
 		6B6A97E62508F7AA00AD3D45 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B6A97E52508F7AA00AD3D45 /* main.m */; };
 		6BDB86032508F8D600A199AA /* UIImageView+SDTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB86022508F8D600A199AA /* UIImageView+SDTransformer.m */; };
+		6BDB8608250901C200A199AA /* UIImageView+SDRoundCorner.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB8607250901C200A199AA /* UIImageView+SDRoundCorner.m */; };
+		6BDB860B2509021700A199AA /* UIImageView+SDImageResizing.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB860A2509021700A199AA /* UIImageView+SDImageResizing.m */; };
+		6BDB860E2509022600A199AA /* UIImageView+SDImageCropping.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB860D2509022600A199AA /* UIImageView+SDImageCropping.m */; };
+		6BDB86112509023400A199AA /* UIImageView+SDImageFlipping.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB86102509023400A199AA /* UIImageView+SDImageFlipping.m */; };
+		6BDB86142509024200A199AA /* UIImageView+SDImageRotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB86132509024200A199AA /* UIImageView+SDImageRotation.m */; };
+		6BDB86172509027300A199AA /* UIImageView+SDImageTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB86162509027300A199AA /* UIImageView+SDImageTint.m */; };
+		6BDB861A2509028000A199AA /* UIImageView+SDImageBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB86192509028000A199AA /* UIImageView+SDImageBlur.m */; };
+		6BDB861D2509028C00A199AA /* UIImageView+SDImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB861C2509028C00A199AA /* UIImageView+SDImageFilter.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +43,22 @@
 		6B6A97E52508F7AA00AD3D45 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6BDB86012508F8D600A199AA /* UIImageView+SDTransformer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDTransformer.h"; sourceTree = "<group>"; };
 		6BDB86022508F8D600A199AA /* UIImageView+SDTransformer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDTransformer.m"; sourceTree = "<group>"; };
+		6BDB8606250901C200A199AA /* UIImageView+SDRoundCorner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDRoundCorner.h"; sourceTree = "<group>"; };
+		6BDB8607250901C200A199AA /* UIImageView+SDRoundCorner.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDRoundCorner.m"; sourceTree = "<group>"; };
+		6BDB86092509021700A199AA /* UIImageView+SDImageResizing.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDImageResizing.h"; sourceTree = "<group>"; };
+		6BDB860A2509021700A199AA /* UIImageView+SDImageResizing.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDImageResizing.m"; sourceTree = "<group>"; };
+		6BDB860C2509022600A199AA /* UIImageView+SDImageCropping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDImageCropping.h"; sourceTree = "<group>"; };
+		6BDB860D2509022600A199AA /* UIImageView+SDImageCropping.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDImageCropping.m"; sourceTree = "<group>"; };
+		6BDB860F2509023400A199AA /* UIImageView+SDImageFlipping.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDImageFlipping.h"; sourceTree = "<group>"; };
+		6BDB86102509023400A199AA /* UIImageView+SDImageFlipping.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDImageFlipping.m"; sourceTree = "<group>"; };
+		6BDB86122509024200A199AA /* UIImageView+SDImageRotation.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDImageRotation.h"; sourceTree = "<group>"; };
+		6BDB86132509024200A199AA /* UIImageView+SDImageRotation.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDImageRotation.m"; sourceTree = "<group>"; };
+		6BDB86152509027300A199AA /* UIImageView+SDImageTint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDImageTint.h"; sourceTree = "<group>"; };
+		6BDB86162509027300A199AA /* UIImageView+SDImageTint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDImageTint.m"; sourceTree = "<group>"; };
+		6BDB86182509028000A199AA /* UIImageView+SDImageBlur.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDImageBlur.h"; sourceTree = "<group>"; };
+		6BDB86192509028000A199AA /* UIImageView+SDImageBlur.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDImageBlur.m"; sourceTree = "<group>"; };
+		6BDB861B2509028C00A199AA /* UIImageView+SDImageFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDImageFilter.h"; sourceTree = "<group>"; };
+		6BDB861C2509028C00A199AA /* UIImageView+SDImageFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDImageFilter.m"; sourceTree = "<group>"; };
 		C7D011FDF8C434A68E355268 /* Pods-SDWebImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDWebImageDemo.release.xcconfig"; path = "Target Support Files/Pods-SDWebImageDemo/Pods-SDWebImageDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -102,6 +126,22 @@
 			children = (
 				6BDB86012508F8D600A199AA /* UIImageView+SDTransformer.h */,
 				6BDB86022508F8D600A199AA /* UIImageView+SDTransformer.m */,
+				6BDB8606250901C200A199AA /* UIImageView+SDRoundCorner.h */,
+				6BDB8607250901C200A199AA /* UIImageView+SDRoundCorner.m */,
+				6BDB86092509021700A199AA /* UIImageView+SDImageResizing.h */,
+				6BDB860A2509021700A199AA /* UIImageView+SDImageResizing.m */,
+				6BDB860C2509022600A199AA /* UIImageView+SDImageCropping.h */,
+				6BDB860D2509022600A199AA /* UIImageView+SDImageCropping.m */,
+				6BDB860F2509023400A199AA /* UIImageView+SDImageFlipping.h */,
+				6BDB86102509023400A199AA /* UIImageView+SDImageFlipping.m */,
+				6BDB86122509024200A199AA /* UIImageView+SDImageRotation.h */,
+				6BDB86132509024200A199AA /* UIImageView+SDImageRotation.m */,
+				6BDB86152509027300A199AA /* UIImageView+SDImageTint.h */,
+				6BDB86162509027300A199AA /* UIImageView+SDImageTint.m */,
+				6BDB86182509028000A199AA /* UIImageView+SDImageBlur.h */,
+				6BDB86192509028000A199AA /* UIImageView+SDImageBlur.m */,
+				6BDB861B2509028C00A199AA /* UIImageView+SDImageFilter.h */,
+				6BDB861C2509028C00A199AA /* UIImageView+SDImageFilter.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -134,7 +174,6 @@
 				110FE983B484BE71DD82CA16 /* Pods-SDWebImageDemo.debug.xcconfig */,
 				C7D011FDF8C434A68E355268 /* Pods-SDWebImageDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -166,7 +205,7 @@
 		6B6A97C82508F7A800AD3D45 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = myz;
 				TargetAttributes = {
 					6B6A97CF2508F7A800AD3D45 = {
@@ -253,10 +292,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				6B6A97DB2508F7A900AD3D45 /* ViewController.m in Sources */,
+				6BDB86142509024200A199AA /* UIImageView+SDImageRotation.m in Sources */,
+				6BDB861D2509028C00A199AA /* UIImageView+SDImageFilter.m in Sources */,
 				6B6A97D52508F7A900AD3D45 /* AppDelegate.m in Sources */,
 				6B6A97E62508F7AA00AD3D45 /* main.m in Sources */,
+				6BDB86172509027300A199AA /* UIImageView+SDImageTint.m in Sources */,
+				6BDB860E2509022600A199AA /* UIImageView+SDImageCropping.m in Sources */,
+				6BDB861A2509028000A199AA /* UIImageView+SDImageBlur.m in Sources */,
+				6BDB860B2509021700A199AA /* UIImageView+SDImageResizing.m in Sources */,
 				6B6A97D82508F7A900AD3D45 /* SceneDelegate.m in Sources */,
 				6BDB86032508F8D600A199AA /* UIImageView+SDTransformer.m in Sources */,
+				6BDB86112509023400A199AA /* UIImageView+SDImageFlipping.m in Sources */,
+				6BDB8608250901C200A199AA /* UIImageView+SDRoundCorner.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,6 +355,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -332,7 +380,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -366,6 +414,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -384,7 +433,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -400,7 +449,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WU2WFZ2B66;
 				INFOPLIST_FILE = SDWebImageDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -420,7 +469,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = WU2WFZ2B66;
 				INFOPLIST_FILE = SDWebImageDemo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
