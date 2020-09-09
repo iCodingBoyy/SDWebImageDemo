@@ -1,8 +1,8 @@
 //
-//  UIImageView+SDImageTint.h
+//  UIImageView+SDImagePipeline.h
 //  SDWebImageDemo
 //
-//  Created by myz on 2020/9/9.
+//  Created by 马远征 on 9/10/20.
 //  Copyright © 2020 myz. All rights reserved.
 //
 
@@ -11,45 +11,45 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface UIImageView (SDImageTint)
+@interface UIImageView (SDImagePipeline)
 - (void)sd_setImageWithURL:(nullable NSURL *)url
-                 tintColor:(nullable UIColor*)tintColor;
-
-
-- (void)sd_setImageWithURL:(nullable NSURL *)url
-          placeholderImage:(nullable UIImage *)placeholder
-                 tintColor:(nullable UIColor*)tintColor;
+              transformers:(nonnull NSArray<id<SDImageTransformer>> *)transformers;
 
 
 - (void)sd_setImageWithURL:(nullable NSURL *)url
           placeholderImage:(nullable UIImage *)placeholder
-                   options:(SDWebImageOptions)options
-                 tintColor:(nullable UIColor*)tintColor;
-
-
-- (void)sd_setImageWithURL:(nullable NSURL *)url
-          placeholderImage:(nullable UIImage *)placeholder
-                 tintColor:(nullable UIColor*)tintColor
-                 completed:(nullable SDExternalCompletionBlock)completedBlock;
-
-
-- (void)sd_setImageWithURL:(nullable NSURL *)url
-          placeholderImage:(nullable UIImage *)placeholder
-                 tintColor:(nullable UIColor*)tintColor
-                 completed:(nullable SDExternalCompletionBlock)completedBlock;
+              transformers:(nonnull NSArray<id<SDImageTransformer>> *)transformers;
 
 
 - (void)sd_setImageWithURL:(nullable NSURL *)url
           placeholderImage:(nullable UIImage *)placeholder
                    options:(SDWebImageOptions)options
-                 tintColor:(nullable UIColor*)tintColor
+              transformers:(nonnull NSArray<id<SDImageTransformer>> *)transformers;
+
+
+- (void)sd_setImageWithURL:(nullable NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+              transformers:(nonnull NSArray<id<SDImageTransformer>> *)transformers
+                 completed:(nullable SDExternalCompletionBlock)completedBlock;
+
+
+- (void)sd_setImageWithURL:(nullable NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+              transformers:(nonnull NSArray<id<SDImageTransformer>> *)transformers
                  completed:(nullable SDExternalCompletionBlock)completedBlock;
 
 
 - (void)sd_setImageWithURL:(nullable NSURL *)url
           placeholderImage:(nullable UIImage *)placeholder
                    options:(SDWebImageOptions)options
-                 tintColor:(nullable UIColor*)tintColor
+              transformers:(nonnull NSArray<id<SDImageTransformer>> *)transformers
+                 completed:(nullable SDExternalCompletionBlock)completedBlock;
+
+
+- (void)sd_setImageWithURL:(nullable NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                   options:(SDWebImageOptions)options
+              transformers:(nonnull NSArray<id<SDImageTransformer>> *)transformers
                   progress:(nullable SDImageLoaderProgressBlock)progressBlock
                  completed:(nullable SDExternalCompletionBlock)completedBlock;
 @end

@@ -24,6 +24,7 @@
 		6BDB86172509027300A199AA /* UIImageView+SDImageTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB86162509027300A199AA /* UIImageView+SDImageTint.m */; };
 		6BDB861A2509028000A199AA /* UIImageView+SDImageBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB86192509028000A199AA /* UIImageView+SDImageBlur.m */; };
 		6BDB861D2509028C00A199AA /* UIImageView+SDImageFilter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BDB861C2509028C00A199AA /* UIImageView+SDImageFilter.m */; };
+		6BFD4DE3250935180011CFF2 /* UIImageView+SDImagePipeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BFD4DE2250935180011CFF2 /* UIImageView+SDImagePipeline.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,8 @@
 		6BDB86192509028000A199AA /* UIImageView+SDImageBlur.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDImageBlur.m"; sourceTree = "<group>"; };
 		6BDB861B2509028C00A199AA /* UIImageView+SDImageFilter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDImageFilter.h"; sourceTree = "<group>"; };
 		6BDB861C2509028C00A199AA /* UIImageView+SDImageFilter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDImageFilter.m"; sourceTree = "<group>"; };
+		6BFD4DE1250935180011CFF2 /* UIImageView+SDImagePipeline.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDImagePipeline.h"; sourceTree = "<group>"; };
+		6BFD4DE2250935180011CFF2 /* UIImageView+SDImagePipeline.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDImagePipeline.m"; sourceTree = "<group>"; };
 		C7D011FDF8C434A68E355268 /* Pods-SDWebImageDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SDWebImageDemo.release.xcconfig"; path = "Target Support Files/Pods-SDWebImageDemo/Pods-SDWebImageDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,6 +145,8 @@
 				6BDB86192509028000A199AA /* UIImageView+SDImageBlur.m */,
 				6BDB861B2509028C00A199AA /* UIImageView+SDImageFilter.h */,
 				6BDB861C2509028C00A199AA /* UIImageView+SDImageFilter.m */,
+				6BFD4DE1250935180011CFF2 /* UIImageView+SDImagePipeline.h */,
+				6BFD4DE2250935180011CFF2 /* UIImageView+SDImagePipeline.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				6BDB860B2509021700A199AA /* UIImageView+SDImageResizing.m in Sources */,
 				6B6A97D82508F7A900AD3D45 /* SceneDelegate.m in Sources */,
 				6BDB86032508F8D600A199AA /* UIImageView+SDTransformer.m in Sources */,
+				6BFD4DE3250935180011CFF2 /* UIImageView+SDImagePipeline.m in Sources */,
 				6BDB86112509023400A199AA /* UIImageView+SDImageFlipping.m in Sources */,
 				6BDB8608250901C200A199AA /* UIImageView+SDRoundCorner.m in Sources */,
 			);
