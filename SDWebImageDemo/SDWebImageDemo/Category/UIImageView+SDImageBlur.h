@@ -27,8 +27,7 @@ NS_ASSUME_NONNULL_BEGIN
                 blurRadius:(CGFloat)blurRadius;
 
 
-- (void)sd_setImageWithURL:(nullable NSURL *)url
-          placeholderImage:(nullable UIImage *)placeholder
+- (void)sd_setImageWithURL:(NSURL *)url
                 blurRadius:(CGFloat)blurRadius
                  completed:(nullable SDExternalCompletionBlock)completedBlock;
 

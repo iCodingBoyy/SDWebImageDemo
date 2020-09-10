@@ -37,6 +37,7 @@
 - (void)sd_setImageWithURL:(NSURL *)url
               transformers:(NSArray<id<SDImageTransformer>> *)transformers
                  completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
     SDImagePipelineTransformer *transformer = [SDImagePipelineTransformer transformerWithTransformers:transformers];
     [self sd_setImageWithURL:url placeholderImage:nil options:0 transformer:transformer completed:completedBlock];
 }
@@ -68,6 +69,11 @@
                  completed:(nullable SDExternalCompletionBlock)completedBlock {
     
     SDImagePipelineTransformer *transformer = [SDImagePipelineTransformer transformerWithTransformers:transformers];
-    [self sd_setImageWithURL:url placeholderImage:placeholder options:options transformer:transformer progress:progressBlock completed:completedBlock];
+    [self sd_setImageWithURL:url
+            placeholderImage:placeholder
+                     options:options
+                 transformer:transformer
+                    progress:progressBlock
+                   completed:completedBlock];
 }
 @end

@@ -32,7 +32,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)sd_setImageWithURL:(nullable NSURL *)url
-          placeholderImage:(nullable UIImage *)placeholder
                 horizontal:(BOOL)horizontal
                   vertical:(BOOL)vertical
                  completed:(nullable SDExternalCompletionBlock)completedBlock;

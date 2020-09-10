@@ -11,33 +11,65 @@
 
 
 @implementation UIImageView (SDImageCropping)
-- (void)sd_setImageWithURL:(NSURL *)url rect:(CGRect)rect {
+- (void)sd_setImageWithURL:(NSURL *)url
+                      rect:(CGRect)rect {
+    
     SDImageCroppingTransformer *transformer = [SDImageCroppingTransformer transformerWithRect:rect];
-    [self sd_setImageWithURL:url transformer:transformer];
+    [self sd_setImageWithURL:url placeholderImage:nil options:0 transformer:transformer];
 }
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder rect:(CGRect)rect {
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                      rect:(CGRect)rect {
+    
     SDImageCroppingTransformer *transformer = [SDImageCroppingTransformer transformerWithRect:rect];
-    [self sd_setImageWithURL:url placeholderImage:placeholder transformer:transformer];
+    [self sd_setImageWithURL:url placeholderImage:placeholder options:0 transformer:transformer];
 }
 
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder options:(SDWebImageOptions)options rect:(CGRect)rect {
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                   options:(SDWebImageOptions)options
+                      rect:(CGRect)rect {
+    
     SDImageCroppingTransformer *transformer = [SDImageCroppingTransformer transformerWithRect:rect];
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options transformer:transformer];
 }
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder rect:(CGRect)rect completed:(nullable SDExternalCompletionBlock)completedBlock {
+- (void)sd_setImageWithURL:(NSURL *)url
+                      rect:(CGRect)rect
+                 completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
     SDImageCroppingTransformer *transformer = [SDImageCroppingTransformer transformerWithRect:rect];
-    [self sd_setImageWithURL:url placeholderImage:placeholder transformer:transformer completed:completedBlock];
+    [self sd_setImageWithURL:url placeholderImage:nil options:0 transformer:transformer completed:completedBlock];
 }
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder options:(SDWebImageOptions)options rect:(CGRect)rect completed:(nullable SDExternalCompletionBlock)completedBlock {
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                      rect:(CGRect)rect
+                 completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
+    SDImageCroppingTransformer *transformer = [SDImageCroppingTransformer transformerWithRect:rect];
+    [self sd_setImageWithURL:url placeholderImage:placeholder options:0 transformer:transformer completed:completedBlock];
+}
+
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                   options:(SDWebImageOptions)options
+                      rect:(CGRect)rect
+                 completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
     SDImageCroppingTransformer *transformer = [SDImageCroppingTransformer transformerWithRect:rect];
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options transformer:transformer completed:completedBlock];
 }
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder options:(SDWebImageOptions)options rect:(CGRect)rect progress:(nullable SDImageLoaderProgressBlock)progressBlock completed:(nullable SDExternalCompletionBlock)completedBlock {
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                   options:(SDWebImageOptions)options
+                      rect:(CGRect)rect
+                  progress:(nullable SDImageLoaderProgressBlock)progressBlock
+                 completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
     SDImageCroppingTransformer *transformer = [SDImageCroppingTransformer transformerWithRect:rect];
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options transformer:transformer progress:progressBlock completed:completedBlock];
 }

@@ -29,9 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
                      angle:(CGFloat)angle
                    fitSize:(BOOL)fitSize;
 
-
-- (void)sd_setImageWithURL:(nullable NSURL *)url
-          placeholderImage:(nullable UIImage *)placeholder
+- (void)sd_setImageWithURL:(NSURL *)url
                      angle:(CGFloat)angle
                    fitSize:(BOOL)fitSize
                  completed:(nullable SDExternalCompletionBlock)completedBlock;

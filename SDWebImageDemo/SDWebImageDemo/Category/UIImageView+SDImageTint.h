@@ -28,7 +28,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 
 - (void)sd_setImageWithURL:(nullable NSURL *)url
-          placeholderImage:(nullable UIImage *)placeholder
                  tintColor:(nullable UIColor*)tintColor
                  completed:(nullable SDExternalCompletionBlock)completedBlock;
 
@@ -37,6 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
           placeholderImage:(nullable UIImage *)placeholder
                  tintColor:(nullable UIColor*)tintColor
                  completed:(nullable SDExternalCompletionBlock)completedBlock;
+
 
 
 - (void)sd_setImageWithURL:(nullable NSURL *)url

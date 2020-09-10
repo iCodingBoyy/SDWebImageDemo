@@ -65,7 +65,10 @@
                   progress:(nullable SDImageLoaderProgressBlock)progressBlock
                  completed:(nullable SDExternalCompletionBlock)completedBlock {
     
-    SDWebImageContext *imageContext = [SDWebImageContext dictionaryWithObject:transformer forKey:SDWebImageContextImageTransformer];
+    SDWebImageContext *imageContext = nil;
+    if (transformer) {
+        imageContext = [SDWebImageContext dictionaryWithObject:transformer forKey:SDWebImageContextImageTransformer];
+    }
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options context:imageContext progress:progressBlock completed:completedBlock];
 }
 @end

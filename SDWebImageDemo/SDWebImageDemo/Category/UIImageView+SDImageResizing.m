@@ -11,33 +11,74 @@
 
 
 @implementation UIImageView (SDImageResizing)
-- (void)sd_setImageWithURL:(NSURL *)url size:(CGSize)size scaleMode:(SDImageScaleMode)scaleMode {
+- (void)sd_setImageWithURL:(NSURL *)url
+                      size:(CGSize)size
+                 scaleMode:(SDImageScaleMode)scaleMode {
+    
     SDImageResizingTransformer *transformer = [SDImageResizingTransformer transformerWithSize:size scaleMode:scaleMode];
-    [self sd_setImageWithURL:url transformer:transformer];
+    [self sd_setImageWithURL:url placeholderImage:nil options:0 transformer:transformer];
 }
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder size:(CGSize)size scaleMode:(SDImageScaleMode)scaleMode {
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                      size:(CGSize)size
+                 scaleMode:(SDImageScaleMode)scaleMode {
+    
     SDImageResizingTransformer *transformer = [SDImageResizingTransformer transformerWithSize:size scaleMode:scaleMode];
-    [self sd_setImageWithURL:url placeholderImage:placeholder transformer:transformer];
+    [self sd_setImageWithURL:url placeholderImage:placeholder options:0 transformer:transformer];
 }
 
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder options:(SDWebImageOptions)options size:(CGSize)size scaleMode:(SDImageScaleMode)scaleMode {
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                   options:(SDWebImageOptions)options
+                      size:(CGSize)size
+                 scaleMode:(SDImageScaleMode)scaleMode {
+    
     SDImageResizingTransformer *transformer = [SDImageResizingTransformer transformerWithSize:size scaleMode:scaleMode];
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options transformer:transformer];
 }
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder size:(CGSize)size scaleMode:(SDImageScaleMode)scaleMode completed:(nullable SDExternalCompletionBlock)completedBlock {
+
+- (void)sd_setImageWithURL:(NSURL *)url
+                      size:(CGSize)size
+                 scaleMode:(SDImageScaleMode)scaleMode
+                 completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
     SDImageResizingTransformer *transformer = [SDImageResizingTransformer transformerWithSize:size scaleMode:scaleMode];
-    [self sd_setImageWithURL:url placeholderImage:placeholder transformer:transformer completed:completedBlock];
+    [self sd_setImageWithURL:url placeholderImage:nil options:0 transformer:transformer completed:completedBlock];
 }
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder options:(SDWebImageOptions)options size:(CGSize)size scaleMode:(SDImageScaleMode)scaleMode completed:(nullable SDExternalCompletionBlock)completedBlock {
+
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                      size:(CGSize)size
+                 scaleMode:(SDImageScaleMode)scaleMode
+                 completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
+    SDImageResizingTransformer *transformer = [SDImageResizingTransformer transformerWithSize:size scaleMode:scaleMode];
+    [self sd_setImageWithURL:url placeholderImage:placeholder options:0 transformer:transformer completed:completedBlock];
+}
+
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                   options:(SDWebImageOptions)options
+                      size:(CGSize)size
+                 scaleMode:(SDImageScaleMode)scaleMode
+                 completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
     SDImageResizingTransformer *transformer = [SDImageResizingTransformer transformerWithSize:size scaleMode:scaleMode];
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options transformer:transformer completed:completedBlock];
 }
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder options:(SDWebImageOptions)options size:(CGSize)size scaleMode:(SDImageScaleMode)scaleMode progress:(nullable SDImageLoaderProgressBlock)progressBlock completed:(nullable SDExternalCompletionBlock)completedBlock {
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                   options:(SDWebImageOptions)options
+                      size:(CGSize)size
+                 scaleMode:(SDImageScaleMode)scaleMode
+                  progress:(nullable SDImageLoaderProgressBlock)progressBlock
+                 completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
     SDImageResizingTransformer *transformer = [SDImageResizingTransformer transformerWithSize:size scaleMode:scaleMode];
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options transformer:transformer progress:progressBlock completed:completedBlock];
 }

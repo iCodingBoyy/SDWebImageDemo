@@ -43,7 +43,6 @@
     [self sd_setImageWithURL:url placeholderImage:nil options:0 transformer:transformer completed:completedBlock];
 }
 
-
 - (void)sd_setImageWithURL:(NSURL *)url
           placeholderImage:(nullable UIImage *)placeholder
                     filter:(CIFilter *)filter
@@ -71,6 +70,11 @@
                  completed:(nullable SDExternalCompletionBlock)completedBlock {
     
     SDImageFilterTransformer *transformer = [SDImageFilterTransformer transformerWithFilter:filter];
-    [self sd_setImageWithURL:url placeholderImage:placeholder options:options transformer:transformer progress:progressBlock completed:completedBlock];
+    [self sd_setImageWithURL:url
+            placeholderImage:placeholder
+                     options:options
+                 transformer:transformer
+                    progress:progressBlock
+                   completed:completedBlock];
 }
 @end

@@ -12,33 +12,66 @@
 @implementation UIImageView (SDImageBlur)
 - (void)sd_setImageWithURL:(NSURL *)url blurRadius:(CGFloat)blurRadius {
     SDImageBlurTransformer *transformer = [SDImageBlurTransformer transformerWithRadius:blurRadius];
-    [self sd_setImageWithURL:url transformer:transformer];
+    [self sd_setImageWithURL:url placeholderImage:nil options:0 transformer:transformer];
 }
 
 - (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder blurRadius:(CGFloat)blurRadius {
+    
     SDImageBlurTransformer *transformer = [SDImageBlurTransformer transformerWithRadius:blurRadius];
-    [self sd_setImageWithURL:url placeholderImage:placeholder transformer:transformer];
+    [self sd_setImageWithURL:url placeholderImage:placeholder options:0 transformer:transformer];
 }
 
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder options:(SDWebImageOptions)options blurRadius:(CGFloat)blurRadius {
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                   options:(SDWebImageOptions)options
+                blurRadius:(CGFloat)blurRadius {
+    
     SDImageBlurTransformer *transformer = [SDImageBlurTransformer transformerWithRadius:blurRadius];
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options transformer:transformer];
 }
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder blurRadius:(CGFloat)blurRadius completed:(nullable SDExternalCompletionBlock)completedBlock {
+- (void)sd_setImageWithURL:(NSURL *)url
+                blurRadius:(CGFloat)blurRadius
+                 completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
     SDImageBlurTransformer *transformer = [SDImageBlurTransformer transformerWithRadius:blurRadius];
-    [self sd_setImageWithURL:url placeholderImage:placeholder transformer:transformer completed:completedBlock];
+    [self sd_setImageWithURL:url placeholderImage:nil options:0 transformer:transformer completed:completedBlock];
+}
+
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                blurRadius:(CGFloat)blurRadius
+                 completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
+    SDImageBlurTransformer *transformer = [SDImageBlurTransformer transformerWithRadius:blurRadius];
+    [self sd_setImageWithURL:url placeholderImage:placeholder options:0 transformer:transformer completed:completedBlock];
 }
 
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder options:(SDWebImageOptions)options blurRadius:(CGFloat)blurRadius completed:(nullable SDExternalCompletionBlock)completedBlock {
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                   options:(SDWebImageOptions)options
+                blurRadius:(CGFloat)blurRadius
+                 completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
     SDImageBlurTransformer *transformer = [SDImageBlurTransformer transformerWithRadius:blurRadius];
     [self sd_setImageWithURL:url placeholderImage:placeholder options:options transformer:transformer completed:completedBlock];
 }
 
-- (void)sd_setImageWithURL:(NSURL *)url placeholderImage:(nullable UIImage *)placeholder options:(SDWebImageOptions)options blurRadius:(CGFloat)blurRadius progress:(nullable SDImageLoaderProgressBlock)progressBlock completed:(nullable SDExternalCompletionBlock)completedBlock {
+- (void)sd_setImageWithURL:(NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                   options:(SDWebImageOptions)options
+                blurRadius:(CGFloat)blurRadius
+                  progress:(nullable SDImageLoaderProgressBlock)progressBlock
+                 completed:(nullable SDExternalCompletionBlock)completedBlock {
+    
     SDImageBlurTransformer *transformer = [SDImageBlurTransformer transformerWithRadius:blurRadius];
-    [self sd_setImageWithURL:url placeholderImage:placeholder options:options transformer:transformer progress:progressBlock completed:completedBlock];
+    [self sd_setImageWithURL:url
+            placeholderImage:placeholder
+                     options:options
+                 transformer:transformer
+                    progress:progressBlock
+                   completed:completedBlock];
 }
 @end
